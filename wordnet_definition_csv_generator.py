@@ -82,9 +82,9 @@ def write_definitions_to_file(csv_file: str, words: List['str']):
                     definition = clean_definition(synset.definition())
 
                     print(f"  {pos}: {definition}")
-                    line += f"{pos}: {definition}<br/>"
+                    line += f"{pos}: {definition}<br/><br/>"
 
-                line = line.rstrip("<br/>")
+                line = line.rstrip("<br/><br/>")
                 line += '"\n'
                 f.write(line)
             else:
